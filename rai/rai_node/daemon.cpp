@@ -110,7 +110,7 @@ void rai_daemon::daemon::run (boost::filesystem::path const & data_path)
 		rai::work_pool opencl_work (config.node.work_threads, opencl ? [&opencl](rai::uint256_union const & root_a) {
 			return opencl->generate_work (root_a);
 		}
-		                                                             : std::function<boost::optional<uint64_t> (rai::uint256_union const &)> (nullptr));
+		: std::function<boost::optional<uint64_t> (rai::uint256_union const &)> (nullptr));
 		rai::alarm alarm (service);
 		rai::node_init init;
 		try
