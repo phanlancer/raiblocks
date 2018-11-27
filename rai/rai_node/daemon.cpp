@@ -106,6 +106,7 @@ void rai_daemon::daemon::run (boost::filesystem::path const & data_path)
 		config.node.logging.init (data_path);
 		config_file.close ();
 		boost::asio::io_service service;
+		
 		auto opencl (rai::opencl_work::create (config.opencl_enable, config.opencl, config.node.logging));
 		rai::work_pool opencl_work (config.node.work_threads, opencl ? [&opencl](rai::uint256_union const & root_a) {
 			return opencl->generate_work (root_a);
