@@ -424,11 +424,13 @@ std::string rai::vote::to_json () const
 {
 	std::stringstream stream;
 	boost::property_tree::ptree tree;
+
 	tree.put ("account", account.to_account ());
 	tree.put ("signature", signature.number ());
 	tree.put ("sequence", std::to_string (sequence));
 	tree.put ("block", block->to_json ());
 	boost::property_tree::write_json (stream, tree);
+	
 	return stream.str ();
 }
 
