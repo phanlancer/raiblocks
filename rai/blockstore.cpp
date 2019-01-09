@@ -42,11 +42,6 @@ public:
 	{
 		fill_value (block_a);
 	}
-	void reopen_block (rai::change_block const & block_a) override
-	{
-		// reopen blocks
-		fill_value (block_a);
-	}
 	void state_block (rai::state_block const & block_a) override
 	{
 		if (!block_a.previous ().is_zero ())
