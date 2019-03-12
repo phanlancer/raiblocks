@@ -32,7 +32,7 @@ public:
 				tree_a.erase ("account");
 				tree_a.put ("account", account.to_account ());
 				tree_a.erase ("version");
-				tree_a.put ("version", "2");
+				tree_a.put ("version", "2.1");
 				result = true;
 			}
 			case 2:
