@@ -278,7 +278,7 @@ int run_wallet (QApplication & application, int argc, char * const * argv, boost
 	}
 	else
 	{
-		show_error ("Error deserializing config");
+		show_error ("Error de-serializing config");
 	}
 	return result;
 }
