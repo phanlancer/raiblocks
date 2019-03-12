@@ -132,7 +132,7 @@ public:
 	// Requires a write transaction
 	rai::raw_key get_node_id (MDB_txn *);
 
-	/** Deletes the node ID from the store */
+	/** Delete the node ID from the store */
 	void delete_node_id (MDB_txn *);
 
 	void clear (MDB_dbi);
